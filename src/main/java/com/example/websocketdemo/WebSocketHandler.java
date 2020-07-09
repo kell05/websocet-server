@@ -11,6 +11,9 @@ public class WebSocketHandler extends AbstractWebSocketHandler {
     @Override
     protected void handleTextMessage(WebSocketSession session, TextMessage message) throws IOException {
         System.out.println("New Text Message Received");
+
+//        TextMessage responseMessage = new TextMessage("Response: "+message.getPayload());
+//        session.sendMessage(responseMessage);
         session.sendMessage(message);
     }
 
